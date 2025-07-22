@@ -1,1 +1,1 @@
-# optisense64
+# OPTISENSE64 is currently under development!
