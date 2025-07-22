@@ -93,7 +93,7 @@ void readValue(){
   Serial.println("Reading matrix...\n");
 
   for (int row = 0; row < 8; row++) {
-    // Aktifkan ROW (MUX1 sebagai output selector)
+    // Actuvate ROW (MUX1 as output selector)
     digitalWrite(C1, mux[row][0]);
     digitalWrite(B1, mux[row][1]);
     digitalWrite(A1, mux[row][2]);
