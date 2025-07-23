@@ -9,14 +9,15 @@
 
 const int analogPin = 36;   // ADC1_CHANNEL_0
 const int shutterPin = 32;  // SHUTTER PIN 32
-const int RGBled = 27;
+const int RGBled = 27;      // WS2812B LED PIN 27
 
 void colorWipe(uint32_t color, int wait);
 
 Adafruit_NeoPixel strip(1, RGBled, NEO_GRB + NEO_KHZ800);
 
 void setup() {
-  Serial.begin(115200);             // Serial init
+  // Serial init
+  Serial.begin(115200);             
 
   // WS2812B init
   strip.begin();
