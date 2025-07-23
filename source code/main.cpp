@@ -11,9 +11,11 @@ const int analogPin = 36;   // ADC1_CHANNEL_0
 const int shutterPin = 32;  // SHUTTER PIN 32
 const int RGBled = 27;      // WS2812B LED PIN 27
 
-void colorWipe(uint32_t color, int wait);
+// Function declare
+void colorWipe(uint32_t color, int wait); 
 
-Adafruit_NeoPixel strip(1, RGBled, NEO_GRB + NEO_KHZ800);
+// Init WS2812B Led
+Adafruit_NeoPixel strip(1, RGBled, NEO_GRB + NEO_KHZ800); 
 
 void setup() {
   // Serial init
