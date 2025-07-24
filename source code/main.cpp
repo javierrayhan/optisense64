@@ -65,6 +65,7 @@ void loop() {
   } 
 
   else if (isButtonPressedMedium()) {
+    colorWipe(strip.Color(0, 0, 255), 100);
     readValue(analogPin);
 
     if(saveBMPToSD(result8bit, 8, 8)){
