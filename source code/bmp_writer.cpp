@@ -11,22 +11,21 @@
 #define SCK 18
 
 bool setupSPI_SD() {
-  // Pastikan CS awalnya HIGH biar nggak ganggu boot SD card
   pinMode(SD_CS, OUTPUT);
   digitalWrite(SD_CS, HIGH);
-  delay(10); // Stabilin dulu
+  delay(10); 
 
-  // Mulai SPI
+  // SPI Start
   SPI.begin(SCK, MISO, MOSI, SD_CS);
-  delay(100); // Kasih delay buat SD card siap
+  delay(100); 
   
-  // Init SD card dengan SPI speed rendah dulu
+  // Init SD card 
   if (!SD.begin(SD_CS)) {
     Serial.println("[ERROR] SD init failed!");
     return false;
   }
 
-  // Debug tambahan (cek jenis kartu)
+  // Debug
   uint8_t cardType = SD.cardType();
   if (cardType == CARD_NONE) {
     Serial.println("[ERROR] No SD card detected.");
@@ -97,7 +96,7 @@ void writeBMP(File file, const uint8_t* data, int width, int height) {
 
   // Bottom-up pixel data
   for (int row = height - 1; row >= 0; row--) {
-    file.write(&data[row * width], width);  // Tulis 1 baris langsung
+    file.write(&data[row * width], width);  
     for (int p = 0; p < rowSize - width; p++) {
       file.write((uint8_t)0); // padding
     }
