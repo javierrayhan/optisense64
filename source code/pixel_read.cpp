@@ -70,8 +70,9 @@ void readValue(const int analogPin){
 
 void convertTo8bit() {
   for (int i = 0; i < 64; i++) {
-    // Scale 0-4095 to 0-255 using float division, then round to int
-    result8bit[i] = (uint8_t) round((result[i] / 4095.0) * 255.0);
+    float scaled = (result[i] / 4095.0) * 255.0;
+    Serial.printf("raw: %.2f, scaled: %.2f -> %d\n", result[i], scaled, (int)round(scaled));
+    result8bit[i] = (uint8_t) round(scaled);
   }
 }
 
