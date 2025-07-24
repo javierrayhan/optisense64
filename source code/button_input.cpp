@@ -32,7 +32,7 @@ void updateButton() {
 }
 
 bool isButtonPressedShort() {
-    if (wasReleased && pressDuration < 1000) {
+    if (wasReleased && pressDuration < 500) {
         wasReleased = false;
         return true;
     }
@@ -40,7 +40,7 @@ bool isButtonPressedShort() {
 }
 
 bool isButtonPressedMedium() {
-    if (wasReleased && pressDuration >= 1000 && pressDuration < 2000) {
+    if (wasReleased && pressDuration >= 500 && pressDuration < 2000) {
         wasReleased = false;
         return true;
     }
