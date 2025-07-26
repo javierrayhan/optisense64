@@ -33,15 +33,22 @@ void readValue(const int analogPin){
 
   for (int row = 0; row < 8; row++) {
     // Activate (MUX1 as output selector)
-    digitalWrite(C1, mux[row][0]);
-    digitalWrite(B1, mux[row][1]);
-    digitalWrite(A1, mux[row][2]);
+    // digitalWrite(C1, mux[row][0]);
+    // digitalWrite(B1, mux[row][1]);
+    // digitalWrite(A1, mux[row][2]);
+    digitalWrite(C2, mux[row][0]);
+    digitalWrite(B2, mux[row][1]);
+    digitalWrite(A2, mux[row][2]);
 
     for (int col = 0; col < 8; col++) {
       // Activate COLUMN (MUX2 as input selector)
-      digitalWrite(C2, mux[col][0]);
-      digitalWrite(B2, mux[col][1]);
-      digitalWrite(A2, mux[col][2]);
+      // digitalWrite(C2, mux[col][0]);
+      // digitalWrite(B2, mux[col][1]);
+      // digitalWrite(A2, mux[col][2]);
+      
+      digitalWrite(C1, mux[col][0]);
+      digitalWrite(B1, mux[col][1]);
+      digitalWrite(A1, mux[col][2]);
 
       delayMicroseconds(300); // Mux stabilize mu
       
