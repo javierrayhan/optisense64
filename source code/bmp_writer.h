@@ -6,13 +6,13 @@
 #include <SD.h>
 
 // Setup
-void setupSPI_SD();
+bool setupSPI_SD();
 
 // Filename system
 String generateBMPFilename();
 
 // BMP Writer
 void writeBMP(File file, const uint8_t* data, int width, int height);
-void saveBMPToSD(const uint8_t* data, int width, int height);
+bool saveBMPToSD(const uint8_t* data, int width, int height);
 
 #endif
