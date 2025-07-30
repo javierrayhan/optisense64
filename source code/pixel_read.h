@@ -23,6 +23,8 @@ extern float ans;
 // #define B2 21   // MUX2 - control pin B2
 // #define A2 15   // MUX2 - control pin A2
 
+//fix
+
 #define C2 4    // MUX1 - control pin C1
 #define B2 17   // MUX1 - control pin B1
 #define A2 16   // MUX1 - control pin A1
