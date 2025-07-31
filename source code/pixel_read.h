@@ -12,7 +12,7 @@ void resultPrint(bool use8bit = false);
 extern int mux[8][3];
 
 extern int result[64];          // Stores the 8x8 matrix readings
-extern uint8_t result8bit[64];  // Stores the converted 8x8 matrix value
+extern uint8_t result8bit[64];  // Stores the converted 8x8 matrix values
 extern float ans;
 
 // Define ESP32 GPIOs for MUX control pins
